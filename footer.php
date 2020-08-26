@@ -2,9 +2,9 @@
 
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 1.0
+      <b>Version</b> 2.1
     </div>
-    <strong>Copyright &copy; 2018 <a href="">POS</a>.</strong> All rights
+    <strong>Copyright &copy; 2020 <a href="">SENTIMEN ANALISIS TERHADAP ANIES BASWEDAN</a>.</strong> All rights
     reserved.
   </footer>
 

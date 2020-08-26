@@ -1,6 +1,13 @@
 <?php
 require_once './autoload.php';
 $sentiment = new \PHPInsight\Sentiment();
+$host   ="localhost";
+$user   ="root";
+$pass   ="";
+$db     ="db_naivebayes2";
+$conn 	= mysqli_connect ($host, $user, $pass, $db);
+
+
 ?>
           <div class="row"> 
                     <section class="col-lg-12">
@@ -56,9 +63,6 @@ $sentiment = new \PHPInsight\Sentiment();
             $start = 0;
 			 $query="SELECT * FROM tweets WHERE id_keyword='".$_GET["key"]."' AND status='0' order by `id` asc ";
 		$result= $mysqli->query($query);
-		// echo '<pre>';
-		// print_r($query);
-		// echo '</pre>';
 		while($tweets=$result->fetch_assoc())
 		 {
 			 $string=$tweets["tweet"];
@@ -91,11 +95,16 @@ $sentiment = new \PHPInsight\Sentiment();
 		    <td><?php echo $label; ?></td>
 		    <td width="80px">
 <?php
-foreach ($scores as $skor) {
+	foreach ($scores as $skor) {
 		echo $skor;
 	}
-	$query=$mysqli->query("UPDATE tweets set `status` = '1' WHERE id='$tweets[id]' AND `status` = '0' AND id_keyword='".$tweets["id_keyword"]."'");
-	$query=$mysqli->query("INSERT INTO tweet_preprocessing (`Id`,`id_tweet`,`sentimen`,`nilai`,`tanggal`) VALUES ('$Id','".$tweets["id_tweet"]."','$class','$skor',now())");
+	$mysqli->query("UPDATE tweets set `status` = '1' WHERE id='$tweets[id]' AND `status` = '0' AND id_keyword='".$tweets["id_keyword"]."'");
+	mysqli_query($conn, "INSERT INTO tweet_preprocessing SET
+		id			= $tweets[id],
+		id_tweet	= '$tweets[id_tweet]',
+		sentimen	= '$class',
+		nilai		= '$skor',
+		tanggal		= now()") or die (mysqli_error($conn));
 	?>
               
 		    </td>

@@ -56,7 +56,6 @@ $sentiment = new \PHPInsight\Sentiment();
 		    <th>Tanggal</th>
 			 <th>Tweet</th>
 		    <th>Sentiment</th>
-		    <th>Nilai</th>
 			
                 </tr>
             </thead>
@@ -90,15 +89,6 @@ $sentiment = new \PHPInsight\Sentiment();
 		    <td><?php echo WKT($tweets["tanggal"]); ?></td>
 			 <td><?php echo $tweets["tweet"]; ?></td>
 		    <td><?php echo $label; ?></td>
-		    <td width="80px">
-<?php
-		echo $nilai;
-	
-	//$query=$mysqli->query("UPDATE tweets set `status` = '1' WHERE id='$tweets[id]' AND `status` = '0' AND id_keyword='".$tweets["id_keyword"]."'");
-	//$query=$mysqli->query("INSERT INTO tweet_preprocessing (`Id`,`id_tweet`,`sentimen`,`nilai`,`tanggal`) VALUES ('$Id','".$tweets["id_tweet"]."','$class','$skor',now())");
-	?>
-              
-		    </td>
 	        </tr>
                 <?php
             }

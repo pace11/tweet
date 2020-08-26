@@ -30,7 +30,7 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-green sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
 
@@ -38,7 +38,8 @@
     <!-- Logo -->
     <a href="./" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>BYS</b></span>
+      SENTIMEN ANALISIS
+      <span class="logo-mini"><b>SYS</b></span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"></span>
     </a>
@@ -54,7 +55,7 @@
 
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-         <li><a href="#"><b>SENTIMEN ANALISIS KANDIDAT CALON PRESIDEN</b> <b><?php echo strtoupper($_SESSION["ses_level"]);?></b></a>
+         <li><a href="#"><b>SENTIMEN ANALISIS TERHADAP ANIES BASWEDAN</b> <b><?php echo strtoupper($_SESSION["ses_level"]);?></b></a>
         </ul>
       </div>
     </nav>
@@ -91,7 +92,7 @@
           <a href="?page=unduh"><i class="fa fa-download"></i> <span>Unduh tweet</span></a>
         </li>
        
-         <li class="treeview <?php if($_GET["page"]=="datalatih_positif" || $_GET["page"]=="datalatih_negatif" || $_GET["page"]=="datalatih_netral"){?>active<?php }?>">
+         <!-- <li class="treeview <?php if($_GET["page"]=="datalatih_positif" || $_GET["page"]=="datalatih_negatif" || $_GET["page"]=="datalatih_netral"){?>active<?php }?>">
           <a href="#">
             <i class="fa fa-table"></i> <span>Data Latih</span>
             <span class="pull-right-container">
@@ -103,7 +104,7 @@
             <li <?php if($_GET["page"]=="datalatih_negatif"){?>class="active"<?php }?>><a href="?page=datalatih_negatif"><i class="fa fa-circle-o"></i> Negatif</a></li>
             <li <?php if($_GET["page"]=="datalatih_netral"){?>class="active"<?php }?>><a href="?page=datalatih_netral"><i class="fa fa-circle-o"></i> Netral</a></li>
           </ul>
-        </li>
+        </li> -->
         
          </li>
         <li <?php if($_GET["page"]=="tweets"){?>class="active"<?php }?>>
@@ -138,16 +139,16 @@
         </li>
       -->
            <li <?php if($_GET["page"]=="tb_katadasar"){?>class="active"<?php }?>>
-        	<a href="?page=tb_katadasar"><i class="fa fa-gears text-red"></i> <span>Kata Dasar</span></a>
+        	<a href="?page=tb_katadasar"><i class="fa fa-gears"></i> <span>Kata Dasar</span></a>
         </li>
         
            <li <?php if($_GET["page"]=="stopwords"){?>class="active"<?php }?>>
-        	<a href="?page=stopwords"><i class="fa fa-gears text-red"></i> <span>Stopwords</span></a>
+        	<a href="?page=stopwords"><i class="fa fa-gears"></i> <span>Stopwords</span></a>
         </li>
         -->
         
         <li>
-        	<a href="logout.php"><i class="fa fa-sign-out text-red"></i> <span>Logout</span></a>
+        	<a href="logout.php"><i class="fa fa-sign-out"></i> <span>Logout</span></a>
         </li>
  
        
